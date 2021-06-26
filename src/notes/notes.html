@@ -15,3 +15,36 @@ Stream?
     - Sequence of elements which can be created out of a collections
        such as List or any kind of I/O Resource.
             using Keyword: 1. stream()  2. parallelStream()
+
+    - collect(Collectors.toList), very important to convert stream to List.
+
+How Stream API Work?
+    - It work in a sequential manner not like after completion of stream pf all students
+        to filter then to output
+
+Stream Operations are 2 types: (Stream Pipeline)
+    1. Terminal Operations
+    2. Intermediate Operations
+
+without Terminal Operations the executions doesnt start.
+examples of terminal operations are collect, foreach etc.
+
+examples of Intermediate Operations are stream, filter etc.
+
+For Debugging a Stream
+1. peek can be used which takes consumer as an input.
+
+Stream API:
+1. map()
+    - used for only to change data, takes function lambda expression
+2. flatMap()
+    - converts one type to another as like map() method.
+    - used in the context of Stream where each element in the stream
+        represents multiple elements.
+            example :
+                1. each stream element represents
+                    1.1 Stream<List>
+                    1.2 Stream<Array>
+3. distinct - Returns a Stream with unique Elements
+4. count - Returns a long with the total number of elements in the Stream
+5. sorted - Sort the elements in the Stream.
