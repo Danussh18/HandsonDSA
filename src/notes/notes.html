@@ -45,6 +45,11 @@ Stream API:
                 1. each stream element represents
                     1.1 Stream<List>
                     1.2 Stream<Array>
-3. distinct - Returns a Stream with unique Elements
-4. count - Returns a long with the total number of elements in the Stream
-5. sorted - Sort the elements in the Stream.
+3. distinct() - Returns a Stream with unique Elements
+4. count() - Returns a long with the total number of elements in the Stream
+5. sorted() - Sort the elements in the Stream.
+6. reduce() - Terminal Operation. Used to Reduce the contents of a stream to
+    a Single Value.
+    Takes 2 Parameters as a input.
+    1. First Parameters - default or Initial Value.
+    2. Second Parameters - Binary Operator<T>.
