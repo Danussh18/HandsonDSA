@@ -18,15 +18,11 @@ public class biFunctionTest {
     public static void usingBiFunction(){
 
         BiFunction<List<Student>, Predicate<Student>,List<Student> > biFunction = (students, studentPredicate) ->{
-
             List<Student> studentList = new ArrayList<>();
             students.forEach(
                     student -> {
-                        if (studentPredicate.test(student)){
+                        if (studentPredicate.test(student))
                             studentList.add(student);
-//                            System.out.println(student);
-                        }
-
                     }
             );
             return studentList;
