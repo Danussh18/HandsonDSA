@@ -43,8 +43,8 @@ Stream API:
         represents multiple elements.
             example :
                 1. each stream element represents
-                    1.1 Stream<List>
-                    1.2 Stream<Array>
+                    1.1 Stream<> List
+                    1.2 Stream<> Array
 3. distinct() - Returns a Stream with unique Elements
 4. count() - Returns a long with the total number of elements in the Stream
 5. sorted() - Sort the elements in the Stream.
@@ -52,4 +52,44 @@ Stream API:
     a Single Value.
     Takes 2 Parameters as a input.
     1. First Parameters - default or Initial Value.
-    2. Second Parameters - Binary Operator<T>.
+    2. Second Parameters - Binary Operator<>
+7. limit(n) - limits the "n" number of elements to be processed in the stream.
+8. skip(n) - skips the "n" number of elements from the stream.
+9. anyMatch() - Returns true if any one of the element matches thr predicate,
+    otherwise false.
+10. allMatch() - Returns true if all the elements in the stream matches the
+    predicate, otherwise false.
+11. noneMatch() - just opposite to allMatch(). Return true if none of the element
+    in the stream matches the predicate, otherwise false.
+12. findFirst(), findAny() - Used to find an element in the stream.
+        Both the Functions return the result of type Optional.
+        Main difference between anyMatch, allMatch and these are they return boolean
+        this functions return Optional<Integer>.
+
+
+Factory Stream() Methods:
+1. Of() - Creates a stream of certain value passed to this method.
+    Example : Stream<String> stringStrea = Stream.of("Adam","dan","Julie");
+2. Iterate(), generate() - Used to create infinite Streams.
+    Example : iterate(1, x -> x*2);
+              Stream.generate(<Supplier>)
+
+Numeric Streams:
+    - Represents the primitive value in a Stream.
+        - IntStream
+        - LongStream
+        - DoubleStream
+
+IntStream:
+    - IntStream.range(1,50)
+    - IntStream.rangeClosed(1,50)
+
+same with LongStream but not in the case of DoubleStream.
+DoubleStream:
+    IntStream.rangeClose(1,100).asDoubleStream.forEach(System.out::println)
+
+Numeric Stream - Aggregate Functions
+    - sum()
+    - max()
+    - min()
+    - average()
